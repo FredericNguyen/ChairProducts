@@ -1,0 +1,47 @@
+
+html {
+    background-color: aquamarine;
+    font-size: 1.5em;
+}
+
+body {
+    margin: 0em;
+}
+
+.navi_bar {
+    display: flex;
+    height: 1.5em;
+    justify-content: center;
+    font-size: 3em;
+    gap: 5em;
+    border-color: black;
+    border-style:solid;
+    padding: 0.25em;
+    background-color: lightblue;
+    font-size: medium;
+}
+
+.current_page {
+    color: red;
+    font-weight: bold;
+}
+
+.main_blocks {
+    padding: 2em;
+    margin: 1em;
+    border-color: beige;
+    border-style: solid;
+    border-width: 0.5em;
+    background-color:rgb(168, 188, 188);
+}
+
+h1 {
+    height: 10em;
+}
+
+footer {
+    margin: 0px;
+    background-color: grey;
+    text-align: center;
+    padding: 0.5em;
+}
