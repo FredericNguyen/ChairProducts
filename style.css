@@ -5,11 +5,16 @@ html {
 }
 
 body {
-    margin: 0em;
+    min-height: 100vh;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h1 {
     background-color: beige;
+    margin: 0em;
 }
 
 .navi_bar {
@@ -31,7 +36,8 @@ h1 {
 
 .main_blocks {
     padding: 2em;
-    margin: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
     border-color: beige;
     border-style: solid;
     border-width: 0.5em;
