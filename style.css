@@ -15,6 +15,7 @@ body {
 h1 {
     background-color: beige;
     margin: 0em;
+    padding: 0.5em;
 }
 
 .navi_bar {
