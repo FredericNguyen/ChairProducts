@@ -13,6 +13,17 @@ fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=London", {
 })
 .then(data => {
     console.log(data);
+    document.getElementById("ville").innerText = data.location.name;
+    document.getElementById("region").innerText = "(" + data.location.region + ", " + data.location.country + ")";
+    let meteoImg = document.createElement("img");
+    meteoImg.setAttribute("src", data.current.condition.icon)
+    document.getElementById("meteo-icon").prepend(meteoImg);
+    document.getElementById("temp").innerText = data.current.temp_c + "°C";
+    let userWelcome = document.createElement("div");
+    userWelcome.style.textAlign = "right";
+    userWelcome.style.fontWeight = "bold";
+    userWelcome.innerText = "Hi, John";
+    document.getElementById("user-meteo-right").prepend(userWelcome)
 })
 .catch(error => {
     console.error('An error occured. ', error);

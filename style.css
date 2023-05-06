@@ -1,6 +1,6 @@
 
 html {
-    background-color: aquamarine;
+    background-color: paleturquoise;
     font-size: 1.5em;
 }
 
@@ -18,31 +18,39 @@ h1 {
     padding: 0.5em;
 }
 
-.navi_bar {
+#ville-region {
+    width: 8.5em;
+}
+
+#region {
+    font-size:medium;
+}
+
+#header-meteo {
+    padding: 0.5em;
+}
+
+#temp {
     display: flex;
-    height: 1.5em;
-    justify-content: center;
-    gap: 5em;
-    border-color: black;
-    border-style:solid;
-    padding: 0.25em;
-    background-color: lightblue;
-    font-size: medium;
+    align-self: center;
 }
 
-.current_page {
-    color: red;
-    font-weight: bold;
+#header-meteo, #meteo, #meteo-icon {
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    justify-content: space-between;
 }
 
-.main_blocks {
+
+.main-blocks {
     padding: 2em;
     margin-left: 2em;
     margin-right: 2em;
-    border-color: beige;
-    border-style: solid;
-    border-width: 0.5em;
-    background-color:rgb(168, 188, 188);
+    border: 0.01em groove rgba(0, 0, 0, 0.205);
+    border-radius: 5px;
+    background-color:whitesmoke;
+    box-shadow: 0 0 10px 5px rgba(89, 98, 185, 0.671);
 }
 
 footer {
