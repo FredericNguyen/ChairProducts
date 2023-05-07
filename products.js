@@ -28,3 +28,21 @@ fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=London", {
 .catch(error => {
     console.error('An error occured. ', error);
 });
+
+function loadProducts() {
+    let pageNum = document.getElementById("currentPage");
+
+}
+
+function buttonHtmlPages(productsLength) {
+    let productsDOM = document.getElementById("products-container")
+    for (let i=0; i<Math.floor(productsLength/10);i++) {
+        let buttonPage = document.createElement("button");
+        buttonPage.innerText = i;
+        buttonPage.classList.add("buttonPages")
+    }
+}
+
+fetch('https://dummyjson.com/products?limit=0')
+.then(res => res.json())
+.then(data => console.log(data));
