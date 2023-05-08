@@ -78,6 +78,8 @@ function buttonHtmlPages() {
                     productName.innerText = productData.title;
                     productPrice.innerText = "$" + productData.price;
 
+                    product.addEventListener("click", selectProduct)
+
                     productNamePrice.appendChild(productName);
                     productNamePrice.appendChild(productPrice);
                     product.appendChild(productImg);
@@ -86,6 +88,11 @@ function buttonHtmlPages() {
                 }
             });
     }
+}
+
+function selectProduct() {
+    localStorage.setItem("selectedProduct", this.id.replace("product-", ""))
+    location.replace("selected_product.html");
 }
 
 buttonHtmlPages();
