@@ -44,9 +44,12 @@ h1 {
 
 
 .main-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 2em;
+    gap: 2em;
     border: 0.01em groove rgba(0, 0, 0, 0.205);
     border-radius: 5px;
     background-color:whitesmoke;
@@ -55,13 +58,34 @@ h1 {
 
 #products-container {
     display: flex; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    width: 90%;
+    height: 40%;
+}
+
+#products-container > div > img{
+    height: 40%;
 }
 
 #products-container > div {
-    flex: 1 1 25%;
+    flex-basis: 18%;
+    min-width: 18%;
     text-align: center;
-    border: 1px solid #000
+    border: 1px solid #000;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.product {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+}
+
+#pagesButtons {
+    display: flex;
+    gap: 0.25em;
+    font-size: 2em;
 }
 
 footer {
