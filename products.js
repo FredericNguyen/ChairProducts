@@ -40,6 +40,7 @@ function buttonHtmlPages(productsLength) {
         let buttonPage = document.createElement("button");
         buttonPage.innerText = i;
         buttonPage.classList.add("buttonPages")
+        buttonPage.addEventListener("click", listProducts)
     }
 }
 
