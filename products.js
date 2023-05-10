@@ -2,8 +2,8 @@ let key = "bfd822295abb46a8a4a01742230405";
 //city = localStorage[current_user].city;
 let username;
 let city;
-if (!JSON.parse(localStorage.getItem(currentUser))) {
-    let user = JSON.parse(localStorage.getItem(currentUser))
+if (JSON.parse(localStorage.getItem("currentUser"))) {
+    let user = JSON.parse(localStorage.getItem("currentUser"))
     username = user.username == "" ? "User" : user.username;
     city = user.ville == "" ? "Montreal" : user.ville;
 }
