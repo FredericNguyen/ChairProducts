@@ -1,8 +1,17 @@
 let key = "bfd822295abb46a8a4a01742230405";
 //city = localStorage[current_user].city;
-let user = JSON.parse(localStorage.getItem(currentUser))
-username = user.username == "" ? "User" : user.username;
-city = user.ville == "" ? "Montreal" : user.ville;
+let username;
+let city;
+if (!JSON.parse(localStorage.getItem(currentUser))) {
+    let user = JSON.parse(localStorage.getItem(currentUser))
+    username = user.username == "" ? "User" : user.username;
+    city = user.ville == "" ? "Montreal" : user.ville;
+}
+else {
+    username = "User";
+    city = "Montreal";
+}
+
 fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=" + city, {
     headers: {
         Accept: "application/json;charset=utf-8"
