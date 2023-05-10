@@ -1,6 +1,9 @@
 let key = "bfd822295abb46a8a4a01742230405";
 //city = localStorage[current_user].city;
-fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=London", {
+let user = JSON.parse(localStorage.getItem(currentUser))
+username = user.username == "" ? "User" : user.username;
+city = user.ville == "" ? "Montreal" : user.ville;
+fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=" + city, {
     headers: {
         Accept: "application/json;charset=utf-8"
     }
@@ -22,7 +25,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=' + key + "&q=London", {
     let userWelcome = document.createElement("div");
     userWelcome.style.textAlign = "right";
     userWelcome.style.fontWeight = "bold";
-    userWelcome.innerText = "Hi, John";
+    userWelcome.innerText = "Hi, " + username;
     document.getElementById("user-meteo-right").prepend(userWelcome)
 })
 .catch(error => {
