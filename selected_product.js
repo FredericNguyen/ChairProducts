@@ -62,7 +62,7 @@ infoDOM.appendChild(cartButton)
 function addCart() {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
-        cart.add(currentProduct.id)
+        cart.push(currentProduct.id)
         localStorage.setItem("cart", JSON.stringify(cart))
     }
     else {
