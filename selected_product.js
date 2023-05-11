@@ -12,6 +12,7 @@ slashTitle.innerText = " / " + title;
 linkTitle.appendChild(slashTitle);
 linkTitle.style.backgroundColor = "lightgrey";
 linkTitle.style.borderRadius = "12px"
+linkTitle.style.padding = "10px"
 let titleDOM = document.createElement("h2");
 titleDOM.innerText = title;
 titleDOM.style.fontWeight = "bolder";
@@ -38,7 +39,7 @@ priceDOM.appendChild(realPrice)
 priceDOM.appendChild(originalPrice)
 
 let descriptionDOM = document.createElement("div");
-descriptionDOM.innerHTML = "<b>Description</b><p>" + currentProduct.description + "</p>"
+descriptionDOM.innerHTML = "<h3>Description</h3><p>" + currentProduct.description + "</p>"
 
 let image = document.getElementById("currentProduct");
 image.setAttribute("src", currentProduct.images[0]);
