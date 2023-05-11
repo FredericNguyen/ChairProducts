@@ -17,15 +17,15 @@ let titleDOM = document.createElement("h2");
 titleDOM.innerText = title;
 titleDOM.style.fontWeight = "bolder";
 
-let categoryDOM = document.createElement("div");
+let categoryDOM = document.createElement("p");
 categoryDOM.innerText = "Category: " + currentProduct.category;
 
-let brandDOM = document.createElement("div");
+let brandDOM = document.createElement("p");
 brandDOM.innerText = "Brand: " + currentProduct.brand;
 
 let ratingDOM = document.createElement("div");
 ratingDOM.innerText = currentProduct.rating;
-let priceDOM = document.createElement("div");
+let priceDOM = document.createElement("p");
 
 let realPrice = document.createElement("span");
 realPrice.innerText = (currentProduct.price).toString() + "   "
